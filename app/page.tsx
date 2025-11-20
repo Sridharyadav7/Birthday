@@ -197,23 +197,29 @@ export default function Page() {
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
-                <div className="min-h-screen flex flex-col items-center justify-center gap-10 py-10 px-6">
+                <div className="min-h-screen flex flex-col items-center justify-center gap-10 py-8 px-4 md:px-6">
 
-                  {/* Bigger Letter Box */}
-                  <div className="
-      w-full 
-      max-w-3xl 
-      bg-secondary 
-      doodle-outline 
-      p-8 
-      md:p-12 
-      text-lg 
-      md:text-xl 
-      leading-relaxed 
-      whitespace-pre-line 
-      shadow-lg 
-      rounded-2xl
-    ">
+                  {/* Letter Box */}
+                  <div
+                    className="
+        w-full
+        max-w-xl        /* shrink max width for phones */
+        md:max-w-3xl
+        bg-secondary
+        doodle-outline
+        p-4             /* smaller padding on phones */
+        sm:p-6
+        md:p-10
+        text-base       /* readable font on phones */
+        sm:text-lg
+        md:text-xl
+        leading-relaxed
+        whitespace-pre-line
+        shadow-lg
+        rounded-2xl
+        break-words     /* forces long lines to wrap */
+      "
+                  >
                     My love,
 
                     From the beginning to right now, you’ve made my world feel softer, brighter, and safer.
@@ -225,19 +231,29 @@ export default function Page() {
                   </div>
 
                   {/* Love Text */}
-                  <h2 className="font-serif text-3xl md:text-4xl text-center">
+                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-center">
                     Love youuu ❤️
                   </h2>
 
                   {/* Next Button */}
                   <Button
                     onClick={next}
-                    className="bg-primary text-primary-foreground hover:animate-wiggle px-8 py-4 text-lg md:text-xl rounded-xl"
+                    className="
+                    bg-primary 
+        text-primary-foreground 
+        hover:animate-wiggle
+        px-6 
+        py-3 
+        text-lg 
+        sm:text-xl 
+        rounded-xl
+      "
                   >
                     Next ➜
                   </Button>
                 </div>
               </motion.section>
+
 
 
             )}
