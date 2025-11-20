@@ -145,7 +145,7 @@ export default function Page() {
                 {/* Page 3 – Memory Page */}
                 <div className="h-full flex flex-col items-center justify-center gap-6">
                   <div className="doodle-outline p-4 bg-secondary max-h-[65vh] overflow-y-auto">
-                    <div className="relative w-[580px] max-w-full">
+                    <div className="relative w-full max-w-[580px]">
                       <div className="absolute -top-4 -left-4">
                         <Heart size={28} />
                       </div>
@@ -153,7 +153,7 @@ export default function Page() {
                         <Star size={24} />
                       </div>
 
-                      <div className="grid grid-cols-3 gap-6 place-items-center">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 place-items-center">
                         <PolaroidCard frontLabel="01" backText="You’re my favorite person." />
                         <PolaroidCard frontLabel="02" backText="Every day with you feels special." />
                         <PolaroidCard frontLabel="03" backText="You make my world brighter." />
@@ -198,23 +198,47 @@ export default function Page() {
                 className="absolute inset-0"
               >
                 <div className="min-h-screen flex flex-col items-center justify-center gap-10 py-10 px-6">
-                  <div className="max-w-2xl w-full bg-secondary doodle-outline p-10 text-lg leading-relaxed whitespace-pre-line shadow-md rounded-xl">
+
+                  {/* Bigger Letter Box */}
+                  <div className="
+      w-full 
+      max-w-3xl 
+      bg-secondary 
+      doodle-outline 
+      p-8 
+      md:p-12 
+      text-lg 
+      md:text-xl 
+      leading-relaxed 
+      whitespace-pre-line 
+      shadow-lg 
+      rounded-2xl
+    ">
                     My love,
 
-                    From the beginning to right now, you’ve made my world feel softer, brighter, and safer. Thank you for your warmth, your joy, and the quiet ways you care. Loving you is the best thing in my life. I’m lucky to love you — today and every day.
+                    From the beginning to right now, you’ve made my world feel softer, brighter, and safer.
+                    Thank you for your warmth, your joy, and the quiet ways you care.
+
+                    Loving you is the best thing in my life. I’m lucky to love you — today and every day.
 
                     Always yours.
                   </div>
-                  
-                 <h2 className="font-serif text-3xl md:text-4xl text-pretty text-center">Love youuu ❤️</h2>
+
+                  {/* Love Text */}
+                  <h2 className="font-serif text-3xl md:text-4xl text-center">
+                    Love youuu ❤️
+                  </h2>
+
+                  {/* Next Button */}
                   <Button
                     onClick={next}
-                    className="bg-primary text-primary-foreground hover:animate-wiggle px-6 py-3 text-lg"
+                    className="bg-primary text-primary-foreground hover:animate-wiggle px-8 py-4 text-lg md:text-xl rounded-xl"
                   >
                     Next ➜
                   </Button>
                 </div>
               </motion.section>
+
 
             )}
 
@@ -231,8 +255,8 @@ export default function Page() {
                 {/* Page 5 – Ending Page */}
                 <div className="h-full flex flex-col items-center justify-center gap-6 relative">
                   <h2 className="font-serif text-3xl md:text-4xl text-pretty text-center">Happy Birthday Shaanu ❤️</h2>
-                  
-                 <h4 className="font-serif text-3xl md:text-4xl text-pretty text-center">You are the Love of my life. ❤️</h4>
+
+                  <h4 className="font-serif text-3xl md:text-4xl text-pretty text-center">You are the Love of my life. ❤️</h4>
                   <p className="text-center text-lg max-w-xl text-pretty">
                     Here’s to more memories, laughter, and love with you.
                   </p>
